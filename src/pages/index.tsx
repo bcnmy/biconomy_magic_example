@@ -40,7 +40,7 @@ export default function Home() {
     magic = new Magic("pk_live_B3CC63B614156D0E", {
       network: {
         rpcUrl: "https://rpc.ankr.com/polygon_mumbai",
-        chainId: 80001, // Polygon Mumbai or change as per your preferred chain
+        chainId: chainId, // Polygon Mumbai or change as per your preferred chain
       },
     });
 
@@ -57,7 +57,7 @@ export default function Home() {
 
       const biconomySmartAccountConfig: BiconomySmartAccountV2Config = {
         signer: web3Provider.getSigner(),
-        chainId: 80001,
+        chainId: chainId,
         biconomyPaymasterApiKey:
           "-RObQRX9ei.fc6918eb-c582-4417-9d5a-0507b17cfe71",
         bundlerUrl: `https://bundler.biconomy.io/api/v2/${chainId}/nJPK7B3ru.dd7f7861-190d-41bd-af80-6877f74b8f44`,
