@@ -27,6 +27,7 @@ export default function Home() {
       providerUrl: "https://eth-sepolia.public.blastapi.io",
       incrementCountContractAdd: "0xd9ea570eF1378D7B52887cE0342721E164062f5f",
       biconomyPaymasterApiKey: "gJdVIBMSe.f6cc87ea-e351-449d-9736-c04c6fab56a2",
+      explorerUrl: "https://sepolia.etherscan.io/tx/",
     },
     {
       chainId: 80001,
@@ -35,6 +36,7 @@ export default function Home() {
       incrementCountContractAdd: "0xc34E02663D5FFC7A1CeaC3081bF811431B096C8C",
       biconomyPaymasterApiKey:
         "-RObQRX9ei.fc6918eb-c582-4417-9d5a-0507b17cfe71",
+      explorerUrl: "https://mumbai.polygonscan.com/tx/",
     },
   ];
 
@@ -211,7 +213,7 @@ export default function Home() {
               {txnHash && (
                 <a
                   target="_blank"
-                  href={`https://mumbai.polygonscan.com/tx/${txnHash}`}
+                  href={`${chains[chainSelected].explorerUrl + txnHash}`}
                 >
                   <span className="text-white font-bold underline">
                     Txn Hash
